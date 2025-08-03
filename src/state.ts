@@ -1,5 +1,5 @@
 import { createInterface, type Interface} from "readline";
-import {getCommands} from "./commands/registry.js";
+import {getCommands} from "./commands/index.js";
 
 export function initState() {
     const rl = createInterface({

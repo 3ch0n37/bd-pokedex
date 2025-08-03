@@ -1,6 +1,3 @@
-import * as readline from "node:readline";
-import * as process from "node:process";
-import {getCommands} from "./commands/registry.js";
 import {State} from "./types/state";
 
 export function cleanInput(input: string): string[] {
