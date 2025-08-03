@@ -6,13 +6,15 @@
   "scripts": {
     "build": "npx tsc",
     "start": "node dist/main.js",
-    "dev": "npx tsc && node dist/main.js"
+    "dev": "npx tsc && node dist/main.js",
+    "test": "vitest --run"
   },
   "author": "vladimir.rujevic@live.com",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^24.1.0",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
   },
   "type": "module"
 }
