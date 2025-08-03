@@ -11,10 +11,10 @@ export function cleanInput(input: string): string[] {
     return result;
 }
 
-export function startREPL(state: State) {
+export async function startREPL(state: State) {
 
     state.readline.prompt();
-    state.readline.on("line", (input) => {
+    state.readline.on("line", async (input) => {
         const words = cleanInput(input);
         if (!words.length) {
             state.readline.prompt();
@@ -27,7 +27,7 @@ export function startREPL(state: State) {
             const cmd = state.commands[commandName];
 
             try {
-                cmd.callback(state);
+                await cmd.callback(state);
             } catch (e) {
                 console.log(e);
             }

@@ -1,6 +1,6 @@
 import type { State } from "src/types/state";
 
-export function commandHelp(state: State) {
+export async function commandHelp(state: State): Promise<void> {
     console.log(
         'Welcome to the Pokedex!\n',
         'Usage:\n\n'
