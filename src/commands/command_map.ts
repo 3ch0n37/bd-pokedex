@@ -1,4 +1,4 @@
-import type { State } from "src/types/state.js";
+import type { State } from "src/types/state";
 import type { Location } from "src/types/pokeapi";
 
 function printLocations(locations: Location[]) {

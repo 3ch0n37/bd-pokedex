@@ -19,6 +19,9 @@ export class PokeAPI {
         const res = await fetch(pageURL ?? base, {
             method: "GET",
         });
+        if (!res.ok) {
+            throw new Error(`Failed to fetch locations: ${res.statusText}`);
+        }
         const data = await res.json() as ShallowLocations;
         this.cache.add<ShallowLocations>(url, data);
         return data;
@@ -36,6 +39,9 @@ export class PokeAPI {
                 method: "GET",
             }
         );
+        if (!res.ok) {
+            throw new Error(`Failed to fetch location: ${res.statusText}`);
+        }
         const data = await res.json() as Location;
         this.cache.add<Location>(locationName, data);
         return data;

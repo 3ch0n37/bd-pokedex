@@ -21,12 +21,13 @@ export async function startREPL(state: State) {
         }
 
         const commandName = words[0];
+        const args = words.slice(1);
 
         if (commandName in state.commands) {
             const cmd = state.commands[commandName];
 
             try {
-                await cmd.callback(state);
+                await cmd.callback(state, ...args);
             } catch (e) {
                 console.log((e as Error).message);
             }
