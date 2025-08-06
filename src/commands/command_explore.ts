@@ -1,7 +1,7 @@
 import {State} from "../types/state";
 
 export async function commandExplore(state: State, locationName: string) {
-    const location = await state.pokeapi.fetchLocation(locationName);
+    const location = await state.pokeApi.fetchLocation(locationName);
     console.log(`Exploring ${location.name}`);
     if(location.pokemon_encounters.length > 0) {
         console.log("Found Pokemon:")

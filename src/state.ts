@@ -14,8 +14,9 @@ export function initState(cache: Cache) {
     return {
         readline: rl,
         commands: getCommands(),
-        pokeapi: new PokeAPI(cache),
+        pokeApi: new PokeAPI(cache),
         offset: 0,
         pageSize: pageSize,
+        caughtPokemon: {},
     };
 }

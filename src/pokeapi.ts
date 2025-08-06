@@ -1,5 +1,6 @@
 import type {ShallowLocations, Location} from "./types/pokeapi.js";
 import {Cache} from "./pokecache";
+import {Pokemon} from "./types/pokemon";
 
 export class PokeAPI {
     private static readonly baseURL = "https://pokeapi.co/api/v2";
@@ -44,6 +45,23 @@ export class PokeAPI {
         }
         const data = await res.json() as Location;
         this.cache.add<Location>(locationName, data);
+        return data;
+    }
+
+    async fetchPokemon(pokemonName: string): Promise<Pokemon> {
+        const url = `${PokeAPI.baseURL}/pokemon/${pokemonName}`;
+        const entry = this.cache.get<Pokemon>(url);
+        if (entry) {
+            return entry;
+        }
+        const res = await fetch(url, {
+            method: "GET",
+        });
+        if (!res.ok) {
+            throw new Error(`Failed to fetch pokemon: ${res.statusText}`);
+        }
+        const data = await res.json() as Pokemon;
+        this.cache.add<Pokemon>(url, data);
         return data;
     }
 }
