@@ -1,11 +1,11 @@
 import {CLICommand} from "../types/command";
-import {commandExit} from "./command_exit.js";
-import {commandHelp} from "./command_help.js";
-import {commandMapForward, commandMapBack} from "./command_map.js";
-import {commandExplore} from "./command_explore.js";
-import {commandCatch} from "./command_catch.js";
-import {commandInspect} from "./command_inspect.js";
-import {commandPokedex} from "./command_pokedex.js";
+import {commandExit} from "./command_exit";
+import {commandHelp} from "./command_help";
+import {commandMapForward, commandMapBack} from "./command_map";
+import {commandExplore} from "./command_explore";
+import {commandCatch} from "./command_catch";
+import {commandInspect} from "./command_inspect";
+import {commandPokedex} from "./command_pokedex";
 
 export function getCommands(): Record<string, CLICommand> {
     return {

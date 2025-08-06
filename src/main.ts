@@ -1,7 +1,7 @@
-import {startREPL} from "./repl.js";
-import {initState} from "./state.js";
-import {cacheInterval} from "./config.js";
-import {Cache} from "./pokecache.js";
+import {startREPL} from "./repl";
+import {initState} from "./state";
+import {cacheInterval} from "./config";
+import {Cache} from "./pokecache";
 
 async function main() {
     const cache = new Cache(cacheInterval);

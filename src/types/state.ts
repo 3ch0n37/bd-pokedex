@@ -1,6 +1,6 @@
 import type { Interface } from "readline";
-import type { CLICommand } from "./command.js";
-import type { PokeAPI } from "src/pokeapi.js";
+import type { CLICommand } from "./command";
+import type { PokeAPI } from "src/pokeapi";
 import type {Pokemon} from "./pokemon";
 
 export type State = {

@@ -4,14 +4,13 @@
   "description": "Build a pokedex. A Boot Dev project.",
   "main": "index.js",
   "scripts": {
-    "build": "npx tsc",
-    "start": "node dist/main.js",
-    "dev": "npx tsc && node dist/main.js",
+    "start": "bun src/main.ts",
     "test": "vitest --run"
   },
   "author": "vladimir.rujevic@live.com",
   "license": "ISC",
   "devDependencies": {
+    "@types/bun": "^1.2.19",
     "@types/node": "^24.1.0",
     "typescript": "^5.9.2",
     "vitest": "^3.2.4"

@@ -1,8 +1,8 @@
 import {createInterface} from "readline";
-import {getCommands} from "./commands/index.js";
-import {pageSize} from "./config.js";
-import {Cache} from "./pokecache.js";
-import {PokeAPI} from "./pokeapi.js";
+import {getCommands} from "./commands/index";
+import {pageSize} from "./config";
+import {Cache} from "./pokecache";
+import {PokeAPI} from "./pokeapi";
 
 export function initState(cache: Cache) {
     const rl = createInterface({

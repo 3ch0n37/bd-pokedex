@@ -1,4 +1,4 @@
-import { State } from "./state.js";
+import { State } from "./state";
 
 export type CLICommand = {
   name: string;

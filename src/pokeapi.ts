@@ -1,4 +1,4 @@
-import type {ShallowLocations, Location} from "./types/pokeapi.js";
+import type {ShallowLocations, Location} from "./types/pokeapi";
 import {Cache} from "./pokecache";
 import {Pokemon} from "./types/pokemon";
 
